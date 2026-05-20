@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+
+@theme {  --font-family-sans-serif: "Plus Jakarta Sans", sans-serif;}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  @apply font-sans;
+} */
+
+
+/* ============================================
+   Custom Scrollbar — BERYL Holdings Burgundy
+   ============================================ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7A1F47 #f5f5f5;
+}
+
+/* Webkit browsers — Chrome, Safari, Edge, Opera */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-left: 1px solid #ececec;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #7A1F47;
+  border-radius: 0;
+  border: 2px solid #f5f5f5;
+  transition: background 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #5C1735;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: #5C1735;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #f5f5f5;
+}
+
+/* Hide scrollbar on iOS/touch devices while keeping scroll functional */
+@media (hover: none) and (pointer: coarse) {
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
