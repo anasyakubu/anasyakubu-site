@@ -8,6 +8,7 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
+import About from "./pages/About/About";
 
 
 // Routes component to wrap with AuthProvider context
@@ -19,7 +20,7 @@ const AppRoutes = () => {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
-
+        <Route path="/about" element={<About />} />
         {/* Catch-All Route */}
         <Route path="*" element={<Page404 />} />
       </Routes>
