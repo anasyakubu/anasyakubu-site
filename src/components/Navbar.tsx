@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
+import Logo from "../assets/logo-me.png"
 
 interface DropdownItem {
   label: string;
@@ -29,7 +30,6 @@ const navItems: NavItem[] = [
     label: 'Work',
     dropdown: [
       { label: 'Daily Lab', href: '/work/daily-lab', description: 'Software studio' },
-      { label: 'HunterPro Academy', href: '/work/hunterpro', description: 'E-learning SaaS' },
       { label: 'Daily Pay', href: '/work/daily-pay', description: 'Payment aggregation' },
       { label: 'Daily Reach', href: '/work/daily-reach', description: 'Marketing platform' },
     ],
@@ -94,8 +94,8 @@ const Navbar: React.FC = () => {
     <nav
       ref={navRef}
       className={`sticky top-0 z-40 transition-all duration-500 ease-out ${scrolled
-          ? 'bg-zinc-950/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)]'
-          : 'bg-zinc-950 border-b border-white/[0.04]'
+        ? 'bg-zinc-950/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)]'
+        : 'bg-zinc-950 border-b border-white/[0.04]'
         }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -107,15 +107,13 @@ const Navbar: React.FC = () => {
           {/* Left: Compact monogram (only on scroll) */}
           <div
             className={`flex items-center gap-3 transition-all duration-500 ${scrolled
-                ? 'opacity-100 translate-x-0 w-auto'
-                : 'opacity-0 -translate-x-4 w-0 overflow-hidden pointer-events-none'
+              ? 'opacity-100 translate-x-0 w-auto'
+              : 'opacity-0 -translate-x-4 w-0 overflow-hidden pointer-events-none'
               }`}
           >
             <Link to="/" onClick={closeAllMenus} className="flex items-center gap-2.5 group">
               <div className="w-7 h-7 bg-amber-400 flex items-center justify-center rounded-sm">
-                <span className="font-display font-black text-zinc-950 text-[11px] leading-none">
-                  AY
-                </span>
+                <img src={Logo} alt='Anas Yakubu' />
               </div>
               <span className="font-display text-sm font-medium tracking-tight text-white">
                 Anas Yakubu
@@ -134,8 +132,8 @@ const Navbar: React.FC = () => {
                       onClick={() => handleToggle(item.label)}
                       onMouseEnter={() => setOpenDropdown(item.label)}
                       className={`group relative px-4 py-2 font-mono text-[11.5px] uppercase tracking-[0.15em] transition-colors flex items-center gap-1.5 ${openDropdown === item.label
-                          ? 'text-amber-400'
-                          : 'text-zinc-400 hover:text-white'
+                        ? 'text-amber-400'
+                        : 'text-zinc-400 hover:text-white'
                         }`}
                     >
                       <span className="text-zinc-600 group-hover:text-amber-400/60 transition-colors">
@@ -157,8 +155,8 @@ const Navbar: React.FC = () => {
                     >
                       <span
                         className={`transition-colors ${active
-                            ? 'text-amber-400/60'
-                            : 'text-zinc-600 group-hover:text-amber-400/60'
+                          ? 'text-amber-400/60'
+                          : 'text-zinc-600 group-hover:text-amber-400/60'
                           }`}
                       >
                         0{idx + 1}
@@ -245,10 +243,8 @@ const Navbar: React.FC = () => {
         {/* Mobile trigger */}
         <div className="flex lg:hidden items-center justify-between h-14">
           <Link to="/" onClick={closeAllMenus} className="flex items-center gap-2.5">
-            <div className="w-7 h-7 bg-amber-400 flex items-center justify-center rounded-sm">
-              <span className="font-display font-black text-zinc-950 text-[11px] leading-none">
-                AY
-              </span>
+            <div className="w-7 h-7flex items-center justify-center rounded-sm">
+              <img src={Logo} alt='Anas Yakubu' />
             </div>
             <span className="font-display text-sm font-medium tracking-tight text-white">
               Anas Yakubu
@@ -319,8 +315,8 @@ const Navbar: React.FC = () => {
                         </div>
                         <ChevronDown
                           className={`w-4 h-4 text-zinc-500 transition-transform ${mobileSubOpen === item.label
-                              ? 'rotate-180 text-amber-400'
-                              : ''
+                            ? 'rotate-180 text-amber-400'
+                            : ''
                             }`}
                         />
                       </button>

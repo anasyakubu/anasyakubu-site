@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
+import Logo from "../assets/logo-me.png"
 
 
 
@@ -27,7 +28,6 @@ const navLinks: LinkItem[] = [
 
 const projectLinks: LinkItem[] = [
   { label: 'Daily Lab', href: '/work/daily-lab' },
-  { label: 'HunterPro Academy', href: '/work/hunterpro' },
   { label: 'Daily Pay', href: '/work/daily-pay' },
   { label: 'Daily Reach', href: '/work/daily-reach' },
   { label: 'Daily Invoice', href: '/work/daily-invoice' },
@@ -137,11 +137,7 @@ const Footer: React.FC = () => {
               {/* Brand block */}
               <div className="col-span-2 md:col-span-5">
                 <Link to="/" className="inline-flex items-center gap-3 mb-6 group">
-                  <div className="w-10 h-10 bg-amber-400 flex items-center justify-center rounded-sm">
-                    <span className="font-display font-black text-zinc-950 text-base leading-none">
-                      AY
-                    </span>
-                  </div>
+                  <img width={"60px"} src={Logo} alt='Anas Yakubu' />
                   <span className="font-display text-xl font-medium tracking-tight">
                     Anas Yakubu
                   </span>

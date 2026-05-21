@@ -1,6 +1,7 @@
 // src/components/Header.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/logo-me.png"
 
 const Header: React.FC = () => {
   return (
@@ -11,10 +12,8 @@ const Header: React.FC = () => {
           <Link to="/" className="group flex items-center gap-3.5">
             {/* Monogram block */}
             <div className="relative">
-              <div className="w-11 h-11 bg-amber-400 flex items-center justify-center rounded-sm transition-transform duration-500 group-hover:rotate-[-6deg]">
-                <span className="font-display font-black text-zinc-950 text-lg leading-none tracking-tight">
-                  AY
-                </span>
+              <div className="w-11 h-11 flex items-center justify-center rounded-sm transition-transform duration-500 group-hover:rotate-[-6deg]">
+                <img src={Logo} alt='Anas Yakubu' />
               </div>
               <div className="absolute -inset-px border border-amber-400/30 rounded-sm translate-x-1 translate-y-1 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
             </div>
