@@ -1,5 +1,5 @@
 // src/data/projects.ts
-import projectsData from './projects.json';
+import projectsData from './Projects.json';
 
 export interface ProjectLinks {
   live?: string;

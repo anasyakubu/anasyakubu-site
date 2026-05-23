@@ -1,5 +1,5 @@
 // src/data/posts.ts
-import postsData from './posts.json';
+import postsData from './Posts.json';
 
 export interface Post {
   slug: string;
