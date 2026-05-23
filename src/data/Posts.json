@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "its-not-magic-its-programming",
+    "title": "It's Not Magic, It's Programming",
+    "excerpt": "Why I think the best engineers are the ones who refuse to treat their tools as black boxes — and how curiosity compounds over a career.",
+    "coverImage": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=80",
+    "tags": ["Career", "Engineering", "Mindset"],
+    "date": "2026-05-10",
+    "readingTime": 5,
+    "featured": true,
+    "content": "Every developer has had the moment. You paste a snippet from Stack Overflow, it works, and you have *no idea why*. It feels like magic.\n\nBut it isn't. It never is.\n\n## The black box trap\n\nThe fastest way to plateau as an engineer is to treat your tools as black boxes. The framework is magic. The bundler is magic. The database is magic. Each black box you accept is a ceiling you place on yourself.\n\n> The moment you decide something is \"too low-level to understand\" is the moment you stop growing in that direction.\n\nWhen I started, React's re-render behavior felt like magic. Then I read the reconciliation docs, built a tiny virtual DOM myself, and suddenly it wasn't magic — it was just a diffing algorithm with rules I could predict.\n\n## Curiosity compounds\n\nHere's the thing nobody tells you: understanding compounds. Every layer you peel back makes the next one easier.\n\n```javascript\n// This looked like magic until I understood closures\nfunction makeCounter() {\n  let count = 0;\n  return () => ++count;\n}\n\nconst next = makeCounter();\nnext(); // 1\nnext(); // 2\n```\n\nOnce closures clicked, hooks made sense. Once hooks made sense, custom hooks were obvious. Once custom hooks were obvious, state management libraries stopped being scary.\n\n## So what do you do?\n\n- When something works and you don't know why — **stop and find out**\n- Read the source of one library you depend on every month\n- Rebuild a tool you use, badly, just once\n- Ask \"what would happen if I removed this line?\"\n\nIt's not magic. It's programming. And programming is knowable — that's the whole point.\n\nThat's the philosophy I build everything on. Stay curious."
+  },
+  {
+    "slug": "from-intern-to-lead-in-three-years",
+    "title": "From Intern to Lead in Three Years",
+    "excerpt": "What actually moved the needle on my growth — and the unglamorous habits that mattered far more than any framework I learned.",
+    "coverImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    "tags": ["Career", "Growth"],
+    "date": "2026-04-22",
+    "readingTime": 6,
+    "featured": true,
+    "content": "Three years ago I was an intern at NYM Technologies, nervous about pushing my first branch. Today I lead frontend there. People ask how — expecting a list of frameworks.\n\nIt wasn't frameworks.\n\n## Treat every ticket like a craft project\n\nThe smallest bug fix is a chance to do excellent work. I never shipped something I wasn't quietly proud of, even when nobody would notice. Reputation is built from a thousand small things done well.\n\n## Read more code than you write\n\nThe codebase was my textbook. I read pull requests that had nothing to do with my work. I learned the *house style* — not just what worked, but what the team considered good.\n\n```typescript\n// I learned to write code that explains itself\nfunction getActiveUsers(users: User[]): User[] {\n  return users.filter(user => user.status === 'active');\n}\n```\n\n## Make your seniors' lives easier\n\nThis is the unglamorous secret. I asked good questions, not lazy ones. I came with \"I tried X and Y, here's what happened\" instead of \"it doesn't work.\" I became someone people *wanted* to unblock.\n\n## Volunteer for the scary thing\n\nGrowth lives just past the edge of comfort. The exam-taking flow nobody wanted to debug? I took it. The payment integration that looked terrifying? Mine. Each scary thing became a new baseline.\n\n## The actual timeline\n\n- **Year 1** — Absorb everything. Ship small things well.\n- **Year 2** — Own features end-to-end. Start reviewing others' code.\n- **Year 3** — Set technical direction. Make other people better.\n\nNone of this needed a bootcamp or a secret resource. It needed showing up, caring, and being relentlessly curious. Stay careful out there."
+  },
+  {
+    "slug": "designing-a-rag-chatbot-that-doesnt-hallucinate",
+    "title": "Designing a RAG Chatbot That Doesn't Hallucinate",
+    "excerpt": "Lessons from building the AI tutor at the core of HunterPro Academy — strict knowledge-scoping, provider failover, and why \"I don't know\" is a feature.",
+    "coverImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
+    "tags": ["AI", "Engineering", "RAG"],
+    "date": "2026-03-15",
+    "readingTime": 8,
+    "featured": false,
+    "content": "When we built the AI tutor for HunterPro Academy, the brief was unusual: it had to be *willing to say \"I don't know.\"*\n\nMost chatbot demos optimize for sounding confident. We optimized for being correct — even when correct meant declining to answer.\n\n## The hallucination problem\n\nLarge language models are pattern machines. Ask one a question outside its knowledge and it will often invent a plausible, confident, completely wrong answer. For an education platform, that's unacceptable.\n\n## Retrieval-augmented generation\n\nThe fix is RAG — retrieval-augmented generation. Instead of asking the model what it knows, you:\n\n1. Embed your trusted content into a vector database\n2. On each question, retrieve the most relevant chunks\n3. Hand those chunks to the model as context\n4. Instruct it to answer **only** from that context\n\n```typescript\nasync function answer(question: string) {\n  const embedding = await embed(question);\n  const chunks = await pinecone.query(embedding, { topK: 5 });\n\n  if (chunks.every(c => c.score < RELEVANCE_THRESHOLD)) {\n    return \"I don't have information on that topic.\";\n  }\n\n  return llm.complete({ context: chunks, question });\n}\n```\n\nThat threshold check is the whole game. If nothing relevant is retrieved, we don't even call the model — we decline.\n\n## Provider failover\n\nAPIs go down. We chained three providers — OpenAI, then Claude, then DeepSeek — so a single outage never takes the tutor offline.\n\n> Reliability isn't one good decision. It's a fallback for every decision.\n\n## What I'd tell anyone building this\n\n- Make \"I don't know\" a first-class response, not a failure\n- Tune your relevance threshold with real questions\n- Always have a fallback provider\n- Log every declined question — it tells you what content to write next\n\nThe result was a tutor users could actually trust. And trust, in education, is the entire product."
+  }
+]

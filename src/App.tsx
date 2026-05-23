@@ -12,6 +12,9 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Work from "./pages/Work/Work";
 import WorkDetail from "./pages/Work/WorkDetail";
+import Writing from './pages/Writing/Writing';
+import WritingDetail from './pages/Writing/WritingDetail';
+import WritingEditor from './pages/Writing/WritingEditor';
 
 
 // Routes component to wrap with AuthProvider context
@@ -27,6 +30,9 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:slug" element={<WorkDetail />} />
+        <Route path="/writing" element={<Writing />} />
+        <Route path="/writing/:slug" element={<WritingDetail />} />
+        <Route path="/admin/writing" element={<WritingEditor />} />
         {/* Catch-All Route */}
         <Route path="*" element={<Page404 />} />
       </Routes>
