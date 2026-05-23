@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "daily-lab",
+    "title": "Daily Lab",
+    "tagline": "A software studio that ships products people actually want.",
+    "year": "2026",
+    "role": "Founder & Lead Engineer",
+    "category": "SaaS Studio",
+    "featured": true,
+    "status": "ongoing",
+    "cover": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
+    "stack": ["React", "TypeScript", "Node.js", "Tailwind CSS", "PostgreSQL"],
+    "links": {
+      "live": "https://dailylab.dev",
+      "github": ""
+    },
+    "summary": "Daily Lab is a hybrid services-and-SaaS studio building a suite of developer and business tools — Daily Reach, Daily Pay, Daily Invoice, and Daily Host.",
+    "description": [
+      "Daily Lab operates as a hybrid business: client services fund the studio while a growing suite of SaaS products builds long-term recurring revenue. The brand system is deliberately monochrome and restrained, letting the products speak for themselves.",
+      "As founder and lead engineer, I set the technical direction across every product, designed the shared design language, and built the foundational architecture each tool extends from."
+    ],
+    "highlights": [
+      "Shipped four distinct products under one ecosystem",
+      "Built a shared component library used across all products",
+      "Established a monochrome brand system and 52-week content calendar"
+    ]
+  },
+  {
+    "slug": "hunterpro-academy",
+    "title": "HunterPro Academy",
+    "tagline": "A full-stack e-learning SaaS with an AI tutor at its core.",
+    "year": "2025",
+    "role": "Full-Stack Engineer",
+    "category": "E-Learning SaaS",
+    "featured": true,
+    "status": "ongoing",
+    "cover": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    "stack": ["React", "TypeScript", "Node.js", "MongoDB", "OpenAI", "Stripe"],
+    "links": {
+      "live": "",
+      "github": ""
+    },
+    "summary": "A certification-prep platform combining a RAG-based AI chatbot, AI quiz generation, voice chat, and multi-provider subscription billing.",
+    "description": [
+      "HunterPro Academy is a comprehensive e-learning platform built for certification preparation. At its heart is a retrieval-augmented AI tutor with strict knowledge-scoping and multi-provider failover, so answers stay accurate and the service stays online.",
+      "I worked across the entire stack — from the RAG backend and embedding pipeline to the React frontend, exam-taking flow, and admin analytics dashboards."
+    ],
+    "highlights": [
+      "RAG AI chatbot with OpenAI → Claude → DeepSeek failover",
+      "Voice chat via MediaRecorder, Whisper STT, and TTS",
+      "Subscription billing across Stripe, Flutterwave, Paystack & Monnify"
+    ]
+  },
+  {
+    "slug": "daily-pay",
+    "title": "Daily Pay",
+    "tagline": "A payment aggregation platform with a minimalist interface.",
+    "year": "2025",
+    "role": "Frontend Engineer",
+    "category": "Fintech",
+    "featured": true,
+    "status": "completed",
+    "cover": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80",
+    "stack": ["React", "TypeScript", "REST API", "Tailwind CSS"],
+    "links": {
+      "live": "",
+      "github": ""
+    },
+    "summary": "A clean black-and-white payment aggregation dashboard — app management, transaction analytics, and a multi-step onboarding flow.",
+    "description": [
+      "Daily Pay aggregates multiple payment providers behind a single API. I built the full React frontend with a minimalist black-and-white design system and a consistent split-screen layout pattern.",
+      "The interface covers everything from a three-step registration flow to a transaction explorer with drawers, filters, and analytics."
+    ],
+    "highlights": [
+      "Full frontend: auth, dashboard, app CRUD, transactions",
+      "Consistent split-screen layout system",
+      "Transaction explorer with drawer, filters & analytics"
+    ]
+  },
+  {
+    "slug": "daily-reach",
+    "title": "Daily Reach",
+    "tagline": "An email & SMS marketing platform, redesigned to minimalism.",
+    "year": "2026",
+    "role": "Frontend Engineer",
+    "category": "Marketing SaaS",
+    "featured": false,
+    "status": "ongoing",
+    "cover": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80",
+    "stack": ["React", "TypeScript", "SCSS", "TipTap"],
+    "links": {
+      "live": "",
+      "github": ""
+    },
+    "summary": "A systematic redesign of ~20 components from neo-brutalist to a refined, minimalist aesthetic inspired by Linear and Stripe.",
+    "description": [
+      "Daily Reach is an email and SMS marketing platform. I led a full visual redesign — converting roughly twenty React components from a neo-brutalist look to a calm, minimalist aesthetic.",
+      "The work spanned auth pages, the dashboard, campaign and customer management, a TipTap-powered template editor, and a forms builder."
+    ],
+    "highlights": [
+      "Redesigned ~20 components to a minimalist system",
+      "TipTap rich-text template editor",
+      "Design references: Linear, Stripe Dashboard"
+    ]
+  },
+  {
+    "slug": "ahti-website",
+    "title": "AHTI Website",
+    "tagline": "A multi-page institutional site with a strict design system.",
+    "year": "2026",
+    "role": "Frontend Engineer",
+    "category": "Web Development",
+    "featured": false,
+    "status": "completed",
+    "cover": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    "stack": ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    "links": {
+      "live": "",
+      "github": ""
+    },
+    "summary": "The Arewa Health Trust Initiative website — built from scratch with a navy, green and white design system.",
+    "description": [
+      "AHTI is a multi-page React and TypeScript site built on Vite. It follows a strict design system — navy, green, and white, with no gradients and no emojis.",
+      "I built every component from the homepage through a full gallery page with filtering, search, and pagination."
+    ],
+    "highlights": [
+      "Built from scratch: header through full gallery page",
+      "Strict navy / green / white design system",
+      "Gallery with filtering, search & pagination"
+    ]
+  },
+  {
+    "slug": "aws-cloud-club-buk",
+    "title": "AWS Cloud Club BUK",
+    "tagline": "A multi-page community site with live event integration.",
+    "year": "2025",
+    "role": "Frontend Developer",
+    "category": "Web Development",
+    "featured": false,
+    "status": "completed",
+    "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+    "stack": ["HTML", "CSS", "JavaScript", "REST API"],
+    "links": {
+      "live": "",
+      "github": ""
+    },
+    "summary": "The official site for the AWS Cloud Club at Bayero University Kano — landing, events, admin and team pages.",
+    "description": [
+      "A multi-page static site for the AWS Cloud Club at Bayero University Kano, built with a dark navy and gold design system.",
+      "It features live API integration for events, a registration modal with deep linking, an admin event-creation page, and a JSON-driven team page."
+    ],
+    "highlights": [
+      "Live event API integration with registration modal",
+      "Admin event-creation interface",
+      "JSON-driven team page"
+    ]
+  }
+]
