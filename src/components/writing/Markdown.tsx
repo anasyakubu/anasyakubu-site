@@ -190,7 +190,8 @@ const Markdown: React.FC<MarkdownProps> = ({ content }) => {
         3: 'font-display text-xl md:text-2xl font-medium tracking-[-0.01em] text-white mt-8 mb-3',
         4: 'font-mono text-[11px] uppercase tracking-[0.18em] text-amber-400 mt-8 mb-3',
       };
-      const Tag = `h${Math.min(level + 1, 6)}` as keyof JSX.IntrinsicElements;
+      // Fixed: use React.ElementType to avoid JSX namespace error
+      const Tag = `h${Math.min(level + 1, 6)}` as React.ElementType;
       blocks.push(
         <Tag key={key++} className={cls[level]}>
           {renderInline(text, `h${key}`)}
