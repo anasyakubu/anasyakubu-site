@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
               }`}
           >
             <Link to="/" onClick={closeAllMenus} className="flex items-center gap-2.5 group">
-              <div className="w-7 h-7 bg-amber-400 flex items-center justify-center rounded-sm">
+              <div className="w-7 h-7 flex items-center justify-center rounded-sm">
                 <img src={Logo} alt='Anas Yakubu' />
               </div>
               <span className="font-display text-sm font-medium tracking-tight text-white">

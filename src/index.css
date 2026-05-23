@@ -8,16 +8,15 @@
 body {
   @apply font-sans;
 } */
-
-
 /* ============================================
-   Custom Scrollbar — BERYL Holdings Burgundy
+   Custom Scrollbar — Anas Yakubu Portfolio
+   Dark editorial · zinc-950 + amber-400
    ============================================ */
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #7A1F47 #f5f5f5;
+  scrollbar-color: #fbbf24 #18181b;
 }
 
 /* Webkit browsers — Chrome, Safari, Edge, Opera */
@@ -27,27 +26,27 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #f5f5f5;
-  border-left: 1px solid #ececec;
+  background: #09090b;            /* zinc-950 — blends with page */
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #7A1F47;
-  border-radius: 0;
-  border: 2px solid #f5f5f5;
+  background: #3f3f46;            /* zinc-700 — subtle at rest */
+  border-radius: 6px;
+  border: 2px solid #09090b;      /* inset look against the track */
   transition: background 0.2s ease;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #5C1735;
+  background: #fbbf24;            /* amber-400 — the signature accent */
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background: #5C1735;
+  background: #f59e0b;            /* amber-500 — pressed */
 }
 
 *::-webkit-scrollbar-corner {
-  background: #f5f5f5;
+  background: #09090b;
 }
 
 /* Hide scrollbar on iOS/touch devices while keeping scroll functional */
